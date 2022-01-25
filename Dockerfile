@@ -1,17 +1,16 @@
-FROM nvidia/cuda:11.4.2-cudnn8-runtime-ubuntu20.04
+FROM fnndsc/ubuntu-python3
 
-RUN apt-get update &&\
-    apt-get install -y --no-install-recommends \
-    python3 \
-    python3-pip \
-    python3-dev \
-    build-essential
+# RUN apt-get update &&\
+#     apt-get install -y --no-install-recommends \
+#     python3 \
+#     python3-pip \
+#     python3-dev
 
 WORKDIR /rembg
 
 COPY . .
 
-RUN GPU=1 pip3 install .
+RUN pip3 install .
 
 ENTRYPOINT ["rembg"]
 CMD ["rembg", "s"]
