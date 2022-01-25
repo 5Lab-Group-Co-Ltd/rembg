@@ -14,4 +14,4 @@ COPY . .
 RUN GPU=1 pip3 install .
 
 ENTRYPOINT ["rembg"]
-CMD []
+CMD ["rembg", "s"]
