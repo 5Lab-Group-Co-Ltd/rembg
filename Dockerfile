@@ -12,5 +12,5 @@ COPY . .
 
 RUN pip3 install .
 
-ENTRYPOINT ["rembg"]
-CMD ["rembg", "s"]
+ENTRYPOINT ["rembg", "s"]
+CMD []
